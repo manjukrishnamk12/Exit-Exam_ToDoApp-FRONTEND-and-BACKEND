@@ -1,0 +1,135 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  background-image: url('bg-two.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#head{
+  font-family:cursive;
+  font-size: 40px;
+  color: rgb(19, 1, 84);
+}
+
+.Todo {
+  text-align: center;
+  margin-top: 100px;
+  width: 100%;
+  /* background-color: rgb(239, 239, 230); */
+  padding: 10px 10px 17px 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  align-items: center;
+
+}
+
+.Todo:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+#select{
+  width:200px;
+}
+
+/* input,
+Select,
+button {
+  margin-bottom: 15px;
+} */
+
+/* input,
+Select {
+  width: calc(100% - 16px);
+  padding: 10px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input:focus,
+Select:focus {
+  border-color: #4caf50;
+} */
+
+#add,
+#delete {
+  width: 100%;
+  padding: 12px;
+  background-color: #24a026;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#delete:hover {
+  background-color: red;
+}
+
+#add:hover {
+  background-color: blue;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s ease-in-out;
+}
+
+li:hover {
+  background-color: #f0f0f0;
+}
+
+li > input {
+  transform: scale(1.5); /* Adjust the scale factor as needed */
+  margin-right: 10px; /* Add some space between checkbox and description */
+}
+
+.completed {
+  text-decoration:line-through;
+  color: #888;
+}
+
+/* label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #333131;
+} */
+
+@media only screen and (max-width: 600px) {
+  li {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  li > span {
+    margin-bottom: 0;
+  }
+
+  li > input,
+  li > button {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
